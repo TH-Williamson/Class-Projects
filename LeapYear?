@@ -1,0 +1,19 @@
+def is_leap_year(user_year):
+    user_year = int(user_year)
+    if user_year % 400 == 0:
+        return True
+    if user_year % 4 == 0 and user_year % 100 != 0:
+        return True
+    else:
+        return False
+        
+
+if __name__ == '__main__':
+    year = input()
+    leap_year = is_leap_year(year)
+    leap_false = 'is not a leap year.'
+    leap_true = 'is a leap year.'
+    if is_leap_year(year):
+        print(year, leap_true)
+    else:
+        print(year, leap_false)
