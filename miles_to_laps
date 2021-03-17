@@ -1,0 +1,7 @@
+def miles_to_laps(user_miles):
+    return user_miles * 4
+
+if __name__ == '__main__':
+    miles = float(input())
+    laps = miles_to_laps(miles)
+    print('{:.2f}'.format(laps))
