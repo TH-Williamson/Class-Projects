@@ -1,0 +1,22 @@
+def get_values():
+    num_values = int(input())
+    values = []
+    while len(values) < num_values:
+        value = int(input())
+        if value:
+            values.append(value)
+        else:
+            break
+    return values
+
+def filter_values(user_values, upper_threshold):
+    for num in user_values:
+        if num < upper_threshold:
+            print(num)
+        else:
+            pass
+
+if __name__ == '__main__': 
+    user_values_list = get_values()
+    threshold = int(input())
+    filter_values(user_values_list, threshold) 
