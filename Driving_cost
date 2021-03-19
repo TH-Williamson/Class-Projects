@@ -1,0 +1,18 @@
+def driving_cost(driven_miles, miles_per_gallon, dollars_per_gallon):
+    gallons = driven_miles / miles_per_gallon
+    price = gallons * dollars_per_gallon
+    return price
+    
+
+if __name__ == '__main__':
+    dist1 = 10
+    dist2 = 50
+    dist3 = 400
+    mpg = float(input())
+    cost_per_gallon = float(input())
+    cost1 = driving_cost(dist1, mpg, cost_per_gallon)
+    cost2 = driving_cost(dist2, mpg, cost_per_gallon)
+    cost3 = driving_cost(dist3, mpg, cost_per_gallon)
+    print('{:.2f}'.format(cost1))
+    print('{:.2f}'.format(cost2))
+    print('{:.2f}'.format(cost3))
