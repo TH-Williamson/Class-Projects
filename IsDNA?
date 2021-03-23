@@ -1,0 +1,21 @@
+DNA_char = 'ATCG'
+
+def isDNA(st):
+    if st == "":
+            return False
+    for char in st:
+        if char in DNA_char:
+            continue
+        else:
+            return False
+            break
+    return True
+
+if __name__ == '__main__': 
+    DNA_string = input('Please enter a valid DNA sequence')
+    DNA = isDNA(DNA_string)
+    while DNA == False:
+        DNA_string = input('Please enter a valid DNA sequence')
+        DNA = isDNA(DNA_string)
+    if DNA == True:
+        print('Thank you')
